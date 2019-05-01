@@ -9,7 +9,7 @@
 import UIKit
 
 class MemeTableViewController: UITableViewController {
-
+    
     // MARK: Properties
     
     
@@ -22,15 +22,15 @@ class MemeTableViewController: UITableViewController {
     
     @IBOutlet var refreshtable: UITableView!
     
-   
-
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-      
-
+        
+        
         self.tableView.reloadData()
-       
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,7 +40,7 @@ class MemeTableViewController: UITableViewController {
     }
     
     
-
+    
     
     
     
@@ -87,5 +87,5 @@ class MemeTableViewController: UITableViewController {
         self.navigationController!.pushViewController(detailController, animated: true)
     }
     
-
+    
 }

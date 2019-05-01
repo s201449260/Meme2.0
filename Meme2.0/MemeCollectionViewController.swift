@@ -9,11 +9,11 @@
 import UIKit
 
 class MemeCollectionViewController: UICollectionViewController {
-
+    
     
     // MARK: Properties
     
-   
+    
     
     private let reuseIdentifier = "MemeCollectionViewCell"
     
@@ -22,9 +22,9 @@ class MemeCollectionViewController: UICollectionViewController {
                                              bottom: 50.0,
                                              right: 20.0)
     private let itemsPerRow: CGFloat = 3
-
-
-
+    
+    
+    
     
     var allMemes: [Meme]! {
         let object = UIApplication.shared.delegate
@@ -36,10 +36,10 @@ class MemeCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
     }
     
-  
+    
     
     
     
@@ -62,11 +62,11 @@ class MemeCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollectionViewCell", for: indexPath) as! MemeCollectionViewCell
         let meme = self.allMemes[indexPath.row]
         
-      
         
-       
+        
+        
         cell.MemeImageView?.image = meme.memedImage
-      
+        
         
         return cell
     }
@@ -80,7 +80,7 @@ class MemeCollectionViewController: UICollectionViewController {
     }
     
     
-   
+    
 }
 
 

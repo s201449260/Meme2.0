@@ -29,11 +29,11 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var btnCancel: UIBarButtonItem!
     
-     var btnShare: UIBarButtonItem?
+    var btnShare: UIBarButtonItem?
     @IBOutlet weak var topNavigation: UINavigationItem!
     
     var meme: Meme?
-
+    
     
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
@@ -44,7 +44,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         
     ]
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -108,13 +108,13 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBAction func pickAlbumImage(_ sender: UIBarButtonItem) {
         
-          pickAnImage(sourceType: .photoLibrary)
+        pickAnImage(sourceType: .photoLibrary)
         
     }
     
-
+    
     @IBAction func pickCameraImage(_ sender: UIBarButtonItem) {
-          pickAnImage(sourceType: .camera)
+        pickAnImage(sourceType: .camera)
     }
     
     
@@ -246,10 +246,10 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     }
     
     func save() {
-         // Create the meme
-         meme = Meme(topText:  topTxt.text!, bottomText: bottomTxt.text!, originalImage: (imagePickerView.image)!, memedImage : generateMemedImage()   )
-
-      
+        // Create the meme
+        meme = Meme(topText:  topTxt.text!, bottomText: bottomTxt.text!, originalImage: (imagePickerView.image)!, memedImage : generateMemedImage()   )
+        
+        
         // Add it to the memes array in the Application Delegate
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
@@ -260,7 +260,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         
     }
     
-   
+    
     
 }
 
